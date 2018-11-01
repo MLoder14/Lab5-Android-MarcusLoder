@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<ImageView
+			android:src="@drawable/die1"
+			android:layout_width="100.0dp"
+			android:layout_height="100.0dp"
+			android:id="@+id/die"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="10.0dp" />
+		<TextView
+			android:text="Player 1"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:id="@+id/p1Label"
+			android:layout_marginLeft="0.0dp"
+			android:layout_toLeftOf="@id/die" />
+		<TextView
+			android:text="Player 2"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/die"
+			android:id="@+id/p2Label"
+			android:layout_alignBaseline="@id/p1Label"
+			android:layout_marginLeft="0.0dp"  />
+		<TextView
+			android:text="Score"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/p1Label"
+			android:id="@+id/score1Label"
+			android:layout_alignLeft="@id/p1Label" />
+		<TextView
+			android:text="Score"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/p2Label"
+			android:id="@+id/score2Label"
+			android:layout_alignLeft="@id/p2Label" />
+		<TextView
+			android:text="0"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/score1Label"
+			android:id="@+id/score1"
+			android:layout_alignLeft="@id/score1Label" />
+		<TextView
+			android:text="0"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/score2Label"
+			android:id="@+id/score2"
+			android:layout_alignLeft="@id/score2Label" />
+		<TextView
+			android:text="___ 's Turn"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/die"
+			android:id="@+id/turn"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="10.0dp" />
+		
+		<TextView
+			android:text="Points for this turn"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/turn"
+			android:id="@+id/ptsLabel"
+			android:layout_centerHorizontal="true"
+			android:clickable="true" />
+		<TextView
+			android:text="0 Points"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/ptsLabel"
+			android:id="@+id/ptsTurn"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="10dp" />
+		<Button
+			android:text="Roll Die"
+			android:layout_width="100.0dp"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/ptsTurn"
+			android:id="@+id/roll"
+			android:layout_alignLeft="@id/p1Label"  />
+		<Button
+			android:text="End Turn"
+			android:layout_width="100.0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/endTurn"
+			android:layout_alignLeft="@id/p2Label"
+			android:layout_alignBaseline="@id/roll" />
+		<Button
+			android:text="New Game"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/roll"
+			android:id="@+id/newGame"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="25.0dp" />
+
+</RelativeLayout>
